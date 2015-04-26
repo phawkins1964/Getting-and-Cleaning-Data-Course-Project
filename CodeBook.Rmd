@@ -4,19 +4,73 @@ author: "Patrick Hawkins"
 date: "Saturday, April 25, 2015"
 output: html_document
 ---
+Variables in TidyData.Txt File
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+"Activity"
+"Subject"
+"TimeBodyAccelerationMeanXaxis"
+"TimeBodyAccelerationMeanYaxis"
+"TimeBodyAccelerationMeanZaxis"
+"TimeBodyAccelerationStdDevXaxis"
+"TimeBodyAccelerationStdDevYaxis"
+"TimeBodyAccelerationStdDevZaxis"
+"TimeGravityAccelerationMeanXaxis"
+"TimeGravityAccelerationMeanYaxis"
+"TimeGravityAccelerationMeanZaxis"
+"TimeGravityAccelerationStdDevXaxis"
+"TimeGravityAccelerationStdDevYaxis"
+"TimeGravityAccelerationStdDevZaxis"
+"TimeBodyAccelerationJerkSignalMeanXaxis"         
+"TimeBodyAccelerationJerkSignalMeanYaxis"
+"TimeBodyAccelerationJerkSignalMeanZaxis"
+"TimeBodyAccelerationJerkSignalStdDevXaxis"       
+"TimeBodyAccelerationJerkSignalStdDevYaxis"
+"TimeBodyAccelerationJerkSignalStdDevZaxis"
+"TimeBodyGyroscopeMeanXaxis"                      
+"TimeBodyGyroscopeMeanYaxis"
+"TimeBodyGyroscopeMeanZaxis"
+"TimeBodyGyroscopeStdDevXaxis"                    
+"TimeBodyGyroscopeStdDevYaxis"
+"TimeBodyGyroscopeStdDevZaxis"
+"TimeBodyGyroscopeJerkSignalMeanXaxis"            
+"TimeBodyGyroscopeJerkSignalMeanYaxis"
+"TimeBodyGyroscopeJerkSignalMeanZaxis"
+"TimeBodyGyroscopeJerkSignalStdDevXaxis"          
+"TimeBodyGyroscopeJerkSignalStdDevYaxis"
+"TimeBodyGyroscopeJerkSignalStdDevZaxis"
+"TimeBodyAccelerationMagnitudeMean"               
+"TimeBodyAccelerationMagnitudeStdDev"
+"TimeGravityAccelerationMagnitudeMean"
+"TimeGravityAccelerationMagnitudeStdDev"          
+"TimeBodyAccelerationJerkSignalMagnitudeMean"
+"TimeBodyAccelerationJerkSignalMagnitudeStdDev"
+"TimeBodyGyroscopeMagnitudeMean"                  
+"TimeBodyGyroscopeMagnitudeStdDev"
+"TimeBodyGyroscopeJerkSignalMagnitudeMean"
+"TimeBodyGyroscopeJerkSignalMagnitudeStdDev"      
+"FFTFreqBodyAccelerationMeanXaxis"
+"FFTFreqBodyAccelerationMeanYaxis"
+"FFTFreqBodyAccelerationMeanZaxis"                
+"FFTFreqBodyAccelerationStdDevXaxis"
+"FFTFreqBodyAccelerationStdDevYaxis"
+"FFTFreqBodyAccelerationStdDevZaxis"              
+"FFTFreqBodyAccelerationJerkSignalMeanXaxis"
+"FFTFreqBodyAccelerationJerkSignalMeanYaxis"
+"FFTFreqBodyAccelerationJerkSignalMeanZaxis"      
+"FFTFreqBodyAccelerationJerkSignalStdDevXaxis"
+"FFTFreqBodyAccelerationJerkSignalStdDevYaxis"
+"FFTFreqBodyAccelerationJerkSignalStdDevZaxis"    
+"FFTFreqBodyGyroscopeMeanXaxis"
+"FFTFreqBodyGyroscopeMeanYaxis"
+"FFTFreqBodyGyroscopeMeanZaxis"                   
+"FFTFreqBodyGyroscopeStdDevXaxis"
+"FFTFreqBodyGyroscopeStdDevYaxis"
+"FFTFreqBodyGyroscopeStdDevZaxis"                 
+"FFTFreqBodyAccelerationMagnitudeMean"
+"FFTFreqBodyAccelerationMagnitudeStdDev"
+"FFTFreqBodyAccelerationJerkSignalMagnitudeMean"  
+"FFTFreqBodyAccelerationJerkSignalMagnitudeStdDev"
+"FFTFreqBodyGyroscopeMagnitudeMean"
+"FFTFreqBodyGyroscopeMagnitudeStdDev"             
+"FFTFreqBodyGyroscopeJerkSignalMagnitudeMean"
+"FFTFreqBodyGyroscopeJerkSignalMagnitudeStdDev"  

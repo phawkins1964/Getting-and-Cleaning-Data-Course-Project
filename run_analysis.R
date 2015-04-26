@@ -123,11 +123,73 @@ Data <- subset(Data, select = -c(1))
 View(Data)
 
 ###########################################################################################################################################
-# 4 Appropriately labels the data set with descriptive variable names. 
+# Goal #4 Appropriately label the data set with descriptive variable names. 
 
+# Use the information in the 'features_info.txt' file which shows information about the variables used on the feature vector to change 
+# variables names to human readable format consistant with tidy data standards.  For additional information about tidy data standards
+# please visit  http: ............
 
+# Create vector of column names Data for revision and subsequetion application back to the data frame.
+ColumnNames  = colnames(Data); 
+
+# Save Original Names for ref
+ColumnNamesOrig = ColumnNames
+
+# Run code for reformatting column names
+for (i in 1:length(colnames(Data))) 
+{
+    # Convert "subject" to "Subject" for consistancy of capitilization of column names
+    ColumnNames[i] = gsub("subject","Subject",ColumnNames[i])
+    # Convert "activity" to "Activity" for consistancy of capitilization of column names
+    ColumnNames[i] = gsub("activity","Activity",ColumnNames[i])
+    # Convert "-std()" to "StdDev"
+    ColumnNames[i] = gsub("-std\\()","StdDev",ColumnNames[i])
+    # Convert "-mean()" to "Mean" 
+    ColumnNames[i] = gsub("-mean\\()","Mean",ColumnNames[i])
+    # Convert "-X" to "Xaxis" 
+    ColumnNames[i] = gsub("-X","Xaxis",ColumnNames[i])
+    # Convert "-Y" to "Yaxis" 
+    ColumnNames[i] = gsub("-Y","Yaxis",ColumnNames[i])
+    # Convert "-Z" to "Zaxis" 
+    ColumnNames[i] = gsub("-Z","Zaxis",ColumnNames[i])
+    # Convert labels starting with "t" to "Time" 
+    ColumnNames[i] = gsub("^(t)","Time",ColumnNames[i])
+    # Convert labels starting with "f" to "FFTFreq" 
+    ColumnNames[i] = gsub("^(f)","FFTFreq",ColumnNames[i])
+    # Convert "Mag"  to "Magnitude" 
+    ColumnNames[i] = gsub("Mag","Magnitude",ColumnNames[i])
+    # Convert "Jerk"  to "JerKSignal" 
+    ColumnNames[i] = gsub("Jerk","JerkSignal",ColumnNames[i])
+    #Remove Double "BodyBody" text
+    ColumnNames[i] = gsub("BodyBody","Body",ColumnNames[i])
+    # Convert "Gyro"  to "Gyroscope" 
+    ColumnNames[i] = gsub("Gyro","Gyroscope",ColumnNames[i])
+    # Convert "acc"  to "Acceleration" 
+    ColumnNames[i] = gsub("Acc","Acceleration",ColumnNames[i])
+    
+};
+
+# Review Pending Column Name Changes
+View(cbind(ColumnNamesOrig,ColumnNames))
+
+# Apply updated column names to the data set
+colnames(Data) = ColumnNames;
+
+# Review the resulting data set to confirm we have achived Goal #4
+View(Data)
 
 ###########################################################################################################################################
 # 5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each 
 # subject.
+
+# Calculate Mean for each subject by activity grouping
+TidyData<-aggregate(. ~Subject + Activity, Data, mean)
+# Order by Activity and Subject
+TidyData<-TidyData[order(TidyData$Activity,TidyData$Subject),]
+
+# Review the resulting data set to confirm we have achived Goal #5
+View(TidyData)
+
+# Export data set to text file for course project submission
+write.table(TidyData, file = "tidydata.txt",row.name=FALSE)
 
